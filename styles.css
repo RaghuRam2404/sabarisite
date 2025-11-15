@@ -130,7 +130,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center;
+    object-position: center top;
     display: block;
     background: linear-gradient(135deg, var(--deep-maroon) 0%, var(--black) 50%, var(--skin-dark) 100%);
 }
@@ -531,9 +531,11 @@ h1, h2, h3, h4, h5, h6 {
 .trainer-pose {
     width: 100%;
     height: 350px;
-    object-fit: cover;
+    object-fit: contain;
+    object-position: center;
     display: block;
     transition: all var(--transition-medium);
+    background: transparent;
 }
 
 .trainer-pose-card:hover .trainer-pose {
@@ -694,7 +696,6 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 20px;
     padding: 2.5rem 2rem;
     position: relative;
-    transition: all var(--transition-fast);
     height: 100%;
     backdrop-filter: blur(10px);
 }
@@ -702,18 +703,16 @@ h1, h2, h3, h4, h5, h6 {
 .service-card.featured {
     background: var(--gradient-maroon);
     border-color: var(--golden-yellow);
-    transform: scale(1.05);
     box-shadow: var(--shadow-gold);
 }
 
 .service-card:hover {
-    transform: translateY(-10px);
     border-color: var(--golden-yellow);
     box-shadow: var(--shadow-lg);
 }
 
 .service-card.featured:hover {
-    transform: translateY(-10px) scale(1.05);
+    border-color: var(--golden-yellow);
 }
 
 .service-badge {
@@ -753,6 +752,35 @@ h1, h2, h3, h4, h5, h6 {
 
 .service-price .period {
     font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Service Price Options (Multiple Tiers) */
+.service-price-options {
+    margin-bottom: 2rem;
+}
+
+.price-option {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid rgba(212, 162, 55, 0.2);
+}
+
+.price-option:last-child {
+    border-bottom: none;
+}
+
+.price-option .price {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.8rem;
+    color: var(--golden-yellow);
+    margin-right: 0.5rem;
+}
+
+.price-option .period {
+    font-size: 1.1rem;
     color: rgba(255, 255, 255, 0.7);
 }
 
@@ -1124,13 +1152,17 @@ h1, h2, h3, h4, h5, h6 {
 /* Tablet (768px - 991px) */
 @media (max-width: 991px) {
     .hero-image-col {
-        height: 50vh;
-        min-height: 400px;
+        height: 1000px;
+        min-height: 600px;
     }
     
     .trainer-hero-image {
-        height: 50vh;
-        min-height: 400px;
+        height: 750 px;
+        min-height: 600px;
+    }
+    
+    .main-trainer-photo {
+        object-position: center top;
     }
     
     .hero-content-wrapper {
@@ -1172,26 +1204,22 @@ h1, h2, h3, h4, h5, h6 {
     .section-title {
         font-size: 3rem;
     }
-    
-    .service-card.featured {
-        transform: scale(1);
-    }
-    
-    .service-card.featured:hover {
-        transform: translateY(-10px) scale(1);
-    }
 }
 
 /* Mobile (max 767px) */
 @media (max-width: 767px) {
     .hero-image-col {
-        height: 60vh;
-        min-height: 500px;
+        height: 1000px;
+        min-height: 650px;
     }
     
     .trainer-hero-image {
-        height: 60vh;
-        min-height: 500px;
+        height: 750px;
+        min-height: 650px;
+    }
+    
+    .main-trainer-photo {
+        object-position: center 15%;
     }
     
     .hero-content-wrapper {
@@ -1279,6 +1307,7 @@ h1, h2, h3, h4, h5, h6 {
     
     .trainer-pose {
         height: 300px;
+        object-fit: contain;
     }
     
     .bio-title {
@@ -1347,13 +1376,17 @@ h1, h2, h3, h4, h5, h6 {
 /* Small Mobile (max 480px) */
 @media (max-width: 480px) {
     .hero-image-col {
-        height: 55vh;
-        min-height: 450px;
+        height: 1000px;
+        min-height: 700px;
     }
     
     .trainer-hero-image {
-        height: 55vh;
-        min-height: 450px;
+        height: 750px;
+        min-height: 700px;
+    }
+    
+    .main-trainer-photo {
+        object-position: center 10%;
     }
     
     .hero-content-wrapper {
@@ -1435,6 +1468,7 @@ h1, h2, h3, h4, h5, h6 {
     
     .trainer-pose {
         height: 250px;
+        object-fit: contain;
     }
     
     .bio-title {
