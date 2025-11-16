@@ -19,35 +19,9 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // ===================================
-// SCROLL ANIMATIONS - FADE IN ON SCROLL
+// SCROLL ANIMATIONS - DISABLED FOR SMOOTH MOBILE EXPERIENCE
 // ===================================
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
-const fadeElements = document.querySelectorAll('.expertise-card, .service-card, .testimonial-card, .gallery-card, .cta-card, .trainer-pose-card, .trainer-bio-card');
-
-const fadeObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '0';
-            entry.target.style.transform = 'translateY(30px)';
-            
-            setTimeout(() => {
-                entry.target.style.transition = 'all 0.6s ease';
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-            }, 100);
-            
-            fadeObserver.unobserve(entry.target);
-        }
-    });
-}, observerOptions);
-
-fadeElements.forEach(element => {
-    fadeObserver.observe(element);
-});
+// Section and element fade-in animations removed to prevent flickering on mobile devices
 
 // ===================================
 // PARALLAX EFFECT FOR HERO SECTION

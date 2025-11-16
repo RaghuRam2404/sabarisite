@@ -46,6 +46,7 @@
 
 html {
     scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
 }
 
 body {
@@ -54,6 +55,35 @@ body {
     color: var(--white);
     overflow-x: hidden;
     line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Prevent layout shift during image loading */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Add min-height to image containers to prevent layout shift */
+.trainer-pose-card,
+.gallery-card {
+    min-height: 350px;
+}
+
+@media (max-width: 767px) {
+    .trainer-pose-card,
+    .gallery-card {
+        min-height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .trainer-pose-card,
+    .gallery-card {
+        min-height: 250px;
+    }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -1209,13 +1239,13 @@ h1, h2, h3, h4, h5, h6 {
 /* Mobile (max 767px) */
 @media (max-width: 767px) {
     .hero-image-col {
-        height: 1000px;
-        min-height: 650px;
+        height: 850px;
+        min-height: 700px;
     }
     
     .trainer-hero-image {
-        height: 750px;
-        min-height: 650px;
+        height: 600px;
+        min-height: unset;
     }
     
     .main-trainer-photo {
@@ -1376,13 +1406,13 @@ h1, h2, h3, h4, h5, h6 {
 /* Small Mobile (max 480px) */
 @media (max-width: 480px) {
     .hero-image-col {
-        height: 1000px;
+        height: 850px;
         min-height: 700px;
     }
     
     .trainer-hero-image {
-        height: 750px;
-        min-height: 700px;
+        height: 600px;
+        min-height: unset;
     }
     
     .main-trainer-photo {
