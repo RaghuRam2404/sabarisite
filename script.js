@@ -31,7 +31,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // ===================================
 // ANIMATE STATISTICS COUNTER
 // ===================================
-const animateCounter = (element, target, duration = 2000) => {
+const animateCounter = (element, target, duration = 1000) => {
     const start = 0;
     const increment = target / (duration / 16);
     let current = start;
@@ -66,7 +66,7 @@ const statsObserver = new IntersectionObserver((entries) => {
                     
                     setTimeout(() => {
                         animateCounter(stat, number);
-                    }, 200);
+                    }, 25);
                 }
             });
             
