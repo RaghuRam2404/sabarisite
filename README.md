@@ -48,15 +48,15 @@ Professional single-page website for TeamSabari bodybuilding coach.
 ## Color Palette
 
 **Primary Colors**
-- Deep Maroon: ![#5A0E12](https://via.placeholder.com/15/5A0E12/5A0E12.png) `#5A0E12`, ![#7A1217](https://via.placeholder.com/15/7A1217/7A1217.png) `#7A1217`
-- Black/Dark Grey: ![#000000](https://via.placeholder.com/15/000000/000000.png) `#000000`, ![#1A1A1A](https://via.placeholder.com/15/1A1A1A/1A1A1A.png) `#1A1A1A`, ![#2A2A2A](https://via.placeholder.com/15/2A2A2A/2A2A2A.png) `#2A2A2A`
-- Golden Yellow: ![#D4A237](https://via.placeholder.com/15/D4A237/D4A237.png) `#D4A237`, ![#F2C94C](https://via.placeholder.com/15/F2C94C/F2C94C.png) `#F2C94C`
-- White: ![#FFFFFF](https://via.placeholder.com/15/FFFFFF/000000.png) `#FFFFFF`
+- Deep Maroon: ![](https://placehold.co/15x15/5A0E12/5A0E12.png) `#5A0E12` ![](https://placehold.co/15x15/7A1217/7A1217.png) `#7A1217`
+- Black/Dark Grey: ![](https://placehold.co/15x15/000000/000000.png) `#000000` ![](https://placehold.co/15x15/1A1A1A/1A1A1A.png) `#1A1A1A` ![](https://placehold.co/15x15/2A2A2A/2A2A2A.png) `#2A2A2A`
+- Golden Yellow: ![](https://placehold.co/15x15/D4A237/D4A237.png) `#D4A237` ![](https://placehold.co/15x15/F2C94C/F2C94C.png) `#F2C94C`
+- White: ![](https://placehold.co/15x15/FFFFFF/FFFFFF.png) `#FFFFFF`
 
 **Accent Colors**
-- Bright Yellow: ![#F4D158](https://via.placeholder.com/15/F4D158/F4D158.png) `#F4D158`, ![#F8E37A](https://via.placeholder.com/15/F8E37A/F8E37A.png) `#F8E37A`
-- Light Blue: ![#3B6EAA](https://via.placeholder.com/15/3B6EAA/3B6EAA.png) `#3B6EAA`, ![#5C8FD3](https://via.placeholder.com/15/5C8FD3/5C8FD3.png) `#5C8FD3`
-- Skin Tones: ![#C28A60](https://via.placeholder.com/15/C28A60/C28A60.png) `#C28A60`, ![#A66A42](https://via.placeholder.com/15/A66A42/A66A42.png) `#A66A42`
+- Bright Yellow: ![](https://placehold.co/15x15/F4D158/F4D158.png) `#F4D158` ![](https://placehold.co/15x15/F8E37A/F8E37A.png) `#F8E37A`
+- Light Blue: ![](https://placehold.co/15x15/3B6EAA/3B6EAA.png) `#3B6EAA` ![](https://placehold.co/15x15/5C8FD3/5C8FD3.png) `#5C8FD3`
+- Skin Tones: ![](https://placehold.co/15x15/C28A60/C28A60.png) `#C28A60` ![](https://placehold.co/15x15/A66A42/A66A42.png) `#A66A42`
 
 ## File Structure
 
