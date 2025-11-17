@@ -45,6 +45,19 @@ Professional single-page website for TeamSabari bodybuilding coach.
 - Google Fonts (Bebas Neue, Montserrat)
 - Bootstrap Icons
 
+## Color Palette
+
+**Primary Colors**
+- Deep Maroon: `#5A0E12`, `#7A1217`
+- Black/Dark Grey: `#000000`, `#1A1A1A`, `#2A2A2A`
+- Golden Yellow: `#D4A237`, `#F2C94C`
+- White: `#FFFFFF`
+
+**Accent Colors**
+- Bright Yellow: `#F4D158`, `#F8E37A`
+- Light Blue: `#3B6EAA`, `#5C8FD3`
+- Skin Tones: `#C28A60`, `#A66A42`
+
 ## File Structure
 
 ```
