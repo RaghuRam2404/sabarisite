@@ -980,6 +980,245 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ===================================
+   INSTAGRAM REELS SECTION
+   =================================== */
+.reels-section {
+    background: var(--gradient-dark);
+    padding: 5rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.reels-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 30%, rgba(212, 162, 55, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(90, 14, 18, 0.15) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.reels-container {
+    position: relative;
+    padding: 2rem 0;
+}
+
+.reels-scroll-wrapper {
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    padding: 1rem 0 2rem 0;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: var(--golden-yellow) rgba(255, 255, 255, 0.1);
+}
+
+/* Custom Scrollbar Styling */
+.reels-scroll-wrapper::-webkit-scrollbar {
+    height: 8px;
+}
+
+.reels-scroll-wrapper::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+
+.reels-scroll-wrapper::-webkit-scrollbar-thumb {
+    background: var(--gradient-gold);
+    border-radius: 10px;
+    transition: all var(--transition-fast);
+}
+
+.reels-scroll-wrapper::-webkit-scrollbar-thumb:hover {
+    background: var(--golden-yellow);
+}
+
+/* Reel Card */
+.reel-card {
+    flex: 0 0 auto;
+    width: 320px;
+    height: 580px;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid transparent;
+    transition: all var(--transition-fast);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+.reel-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    border-color: var(--golden-yellow);
+    box-shadow: 0 15px 50px rgba(212, 162, 55, 0.3);
+}
+
+/* Reel Embed */
+.reel-embed {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.reel-embed iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
+
+/* Reel Overlay */
+.reel-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    opacity: 0;
+    transition: all var(--transition-fast);
+    pointer-events: none;
+    z-index: 2;
+}
+
+.reel-card:hover .reel-overlay {
+    opacity: 1;
+}
+
+.reel-overlay i {
+    font-size: 4rem;
+    color: var(--golden-yellow);
+    animation: pulseIcon 1.5s ease-in-out infinite;
+    text-shadow: 0 0 20px rgba(212, 162, 55, 0.8);
+}
+
+.reel-overlay-text {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+    background: rgba(212, 162, 55, 0.2);
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    border: 2px solid var(--golden-yellow);
+}
+
+@keyframes pulseIcon {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+}
+
+/* Responsive Design for Reels */
+@media (max-width: 768px) {
+    .reel-card {
+        width: 280px;
+        height: 500px;
+    }
+    
+    .reels-scroll-wrapper {
+        gap: 1.5rem;
+        padding: 0.75rem 0 1.5rem 0;
+    }
+    
+    .reels-section {
+        padding: 3rem 0;
+    }
+    
+    .reel-overlay i {
+        font-size: 3rem;
+    }
+    
+    .reel-overlay-text {
+        font-size: 0.9rem;
+        padding: 0.4rem 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .reel-card {
+        width: 260px;
+        height: 460px;
+    }
+    
+    .reels-scroll-wrapper {
+        gap: 1rem;
+        padding: 0.5rem 0 1rem 0;
+    }
+    
+    .reels-section {
+        padding: 2.5rem 0;
+    }
+}
+
+/* Tablet Optimizations */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .reel-card {
+        width: 300px;
+        height: 540px;
+    }
+}
+
+/* Large Screens */
+@media (min-width: 1400px) {
+    .reel-card {
+        width: 350px;
+        height: 620px;
+    }
+    
+    .reels-scroll-wrapper {
+        gap: 2.5rem;
+    }
+}
+
+/* Gradient Fade Effect on Scroll */
+.reels-container::before,
+.reels-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 2rem;
+    width: 100px;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.reels-container::before {
+    left: 0;
+    background: linear-gradient(to right, var(--black) 0%, transparent 100%);
+}
+
+.reels-container::after {
+    right: 0;
+    background: linear-gradient(to left, var(--black) 0%, transparent 100%);
+}
+
+@media (max-width: 768px) {
+    .reels-container::before,
+    .reels-container::after {
+        width: 50px;
+    }
+}
+
+/* ===================================
    CTA SECTION
    =================================== */
 .cta-section {
