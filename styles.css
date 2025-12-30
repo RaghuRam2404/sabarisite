@@ -1073,60 +1073,6 @@ h1, h2, h3, h4, h5, h6 {
     display: block;
 }
 
-/* Reel Overlay */
-.reel-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.75);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    opacity: 0;
-    transition: all var(--transition-fast);
-    pointer-events: none;
-    z-index: 2;
-}
-
-.reel-card:hover .reel-overlay {
-    opacity: 1;
-}
-
-.reel-overlay i {
-    font-size: 4rem;
-    color: var(--golden-yellow);
-    animation: pulseIcon 1.5s ease-in-out infinite;
-    text-shadow: 0 0 20px rgba(212, 162, 55, 0.8);
-}
-
-.reel-overlay-text {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: var(--white);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
-    background: rgba(212, 162, 55, 0.2);
-    padding: 0.5rem 1.5rem;
-    border-radius: 25px;
-    border: 2px solid var(--golden-yellow);
-}
-
-@keyframes pulseIcon {
-    0%, 100% {
-        transform: scale(1);
-        opacity: 0.8;
-    }
-    50% {
-        transform: scale(1.2);
-        opacity: 1;
-    }
-}
-
 /* Responsive Design for Reels */
 @media (max-width: 768px) {
     .reel-card {
@@ -1141,15 +1087,6 @@ h1, h2, h3, h4, h5, h6 {
     
     .reels-section {
         padding: 3rem 0;
-    }
-    
-    .reel-overlay i {
-        font-size: 3rem;
-    }
-    
-    .reel-overlay-text {
-        font-size: 0.9rem;
-        padding: 0.4rem 1rem;
     }
 }
 
